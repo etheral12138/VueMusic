@@ -1,16 +1,16 @@
 <script lang="ts" setup>
-import { formatSongsAuthor } from '@/utils';
-import { computed, type CSSProperties, ref } from 'vue';
-import { getTopSong } from '../../service';
+import {formatSongsAuthor} from '@/utils';
+import {computed, type CSSProperties, ref} from 'vue';
+import {getTopSong} from '@/service';
 import LoadImg from '@/components/Base/LoadImg.vue';
 import PlayIcon from '@/components/Base/PlayIcon.vue';
-import { useMemorizeRequest } from '@/hook/useMemorizeRequest';
-import { useRouter } from 'vue-router';
+import {useMemorizeRequest} from '@/hook/useMemorizeRequest';
+import {useRouter} from 'vue-router';
 import useThemeStyle from '@/hook/useThemeStyle';
-import { useDbClickPlay } from '@/hook/useDbClickPlay';
-import { mapSongs } from '@/utils/arr-map';
-import { useMainStore } from '@/stores/main';
-import { useNanoid } from '@/hook/useNanoid';
+import {useDbClickPlay} from '@/hook/useDbClickPlay';
+import {mapSongs} from '@/utils/arr-map';
+import {useMainStore} from '@/stores/main';
+import {useNanoid} from '@/hook/useNanoid';
 
 const typeList = [
   {

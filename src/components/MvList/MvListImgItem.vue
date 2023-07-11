@@ -1,14 +1,16 @@
 <script lang="ts" setup>
-import { formatNumber } from '@/utils/index';
-import { Play } from '@vicons/carbon';
-import { useRouter } from 'vue-router';
+import {formatNumber} from '@/utils/index';
+import {Play} from '@vicons/carbon';
+import {useRouter} from 'vue-router';
+import LoadImg from "@/components/Base/LoadImg.vue";
+import PlayIcon from "@/components/Base/PlayIcon.vue";
 
 const props = withDefaults(defineProps<{
-    item: any;
-    height?: string;
-    isToDetail?: boolean;
-    borderRadius?: string;
-    className?: string;
+  item: any;
+  height?: string;
+  isToDetail?: boolean;
+  borderRadius?: string;
+  className?: string;
 }>(), {
   height: '9vw',
   isToDetail: true,

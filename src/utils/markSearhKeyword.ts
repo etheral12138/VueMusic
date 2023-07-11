@@ -1,4 +1,4 @@
-import { isArray, isPlainObject } from 'lodash';
+import {isArray, isPlainObject} from 'lodash';
 
 export const markSearchKeyword = (
   data: any[], keys: (string | string[])[], keyword: string, color: string
@@ -8,10 +8,9 @@ export const markSearchKeyword = (
       if (typeof key === 'string') {
         const itemValue = item[key];
         if (typeof itemValue === 'string') {
-          const value = replaceMarkValue(
-            itemValue, keyword, color
+          item[key + 'RichText'] = replaceMarkValue(
+              itemValue, keyword, color
           );
-          item[key + 'RichText'] = value;
         }
         if (isArray(itemValue) && typeof itemValue[0] === 'string') {
           item[key] = item[key].map((target: string) => {

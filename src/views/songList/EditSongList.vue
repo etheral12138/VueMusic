@@ -1,10 +1,11 @@
 <script lang="ts" setup>
-import type { SelectSongListTagModalExpose } from '@/components/SongsList/SelectSongListTagModal.vue';
-import { updatePlayListCover, updatePlayListInfo } from '@/service';
-import { getImgSize } from '@/utils';
-import type { FormInst, FormRules } from 'naive-ui';
-import { ref } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import type {SelectSongListTagModalExpose} from '@/components/SongsList/SelectSongListTagModal.vue';
+import SelectSongListTagModal from '@/components/SongsList/SelectSongListTagModal.vue';
+import {updatePlayListCover, updatePlayListInfo} from '@/service';
+import {getImgSize} from '@/utils';
+import type {FormInst, FormRules} from 'naive-ui';
+import {ref} from 'vue';
+import {useRoute, useRouter} from 'vue-router';
 
 const route = useRoute();
 const router = useRouter();

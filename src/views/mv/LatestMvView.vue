@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { useMemorizeRequest } from '@/hook/useMemorizeRequest';
-import { getMvList } from '@/service';
-import { useThemeVars } from 'naive-ui';
-import { nextTick, reactive, ref, toRaw, watch } from 'vue';
+import {useMemorizeRequest} from '@/hook/useMemorizeRequest';
+import {getMvList} from '@/service';
+import {useThemeVars} from 'naive-ui';
+import {nextTick, reactive, ref, toRaw, watch} from 'vue';
 import CategoryTab from '@/components/Base/CategoryTab.vue';
 import MvListSkeleton from '@/components/MvList/MvListSkeleton.vue';
 import MvList from '@/components/MvList/MvList.vue';
@@ -34,10 +34,8 @@ const themeVars = useThemeVars();
 const fetchList = (setPageCount = true) => {
   let data = getParams();
   list.value = [];
-
   wrapRequest(data).then((res: { data: { data: never[]; count: number; }; }) => {
     list.value = res.data.data;
-
     if (!firstFetchDataSuccess.value) {
       firstFetchDataSuccess.value = true;
     }
